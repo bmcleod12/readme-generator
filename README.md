@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # title
 
 ## Description
@@ -42,7 +44,5 @@ Questions on the project? Visit my profile here: https://github.com/wrsyjhg
 Or contact me at yrtj.
 
 ## License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 MIT
