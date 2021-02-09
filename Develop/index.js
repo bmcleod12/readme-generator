@@ -1,4 +1,8 @@
 // TODO: Include packages needed for this application
+const inquirer = require('inquirer');
+const fs = require('fs');
+const badgeMaker = require('badge-maker');
+// const generateMarkdown = require('.\utils\generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -31,7 +35,7 @@ const questions = [
         type:  'list',
         name: 'license',
         message: 'Select a license to apply to your application.',
-        choices: ['']
+        choices: ['MIT', 'Unlicense']
     },
     {
         type:  'input',
