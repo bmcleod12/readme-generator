@@ -1,5 +1,9 @@
 # ReadMe Generator
 
+## Description
+
+desc
+
 ## Table of Contents
 
 * [Description](#description)
@@ -8,31 +12,34 @@
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Credits](#credits)
+* [Questions](#questions)
 * [License](#license)
-
-## Description
-
-test
 
 ## Installation
 
-asdf
+install
 
 ## Usage
 
-awer
+use
 
 ## Contributing
 
-asdf
+contribu
 
 ## Tests
 
-srth
+tests
 
 ## Credits
 
-asdf
+links
+
+## Questions
+
+Questions on the project? Visit my profile here: https://github.com/bmcleod12
+
+Or contact me at brenna.mcleod94@gmail.com.
 
 ## License
 

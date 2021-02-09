@@ -7,6 +7,10 @@ const badgeMaker = require('badge-maker');
 const generateReadMe = (answers) =>
 `# ${answers.appTitle}
 
+## Description
+
+${answers.description}
+
 ## Table of Contents
 
 * [Description](#description)
@@ -15,11 +19,8 @@ const generateReadMe = (answers) =>
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Credits](#credits)
+* [Questions](#questions)
 * [License](#license)
-
-## Description
-
-${answers.description}
 
 ## Installation
 
@@ -40,6 +41,12 @@ ${answers.appTest}
 ## Credits
 
 ${answers.credits}
+
+## Questions
+
+Questions on the project? Visit my profile here: https://github.com/${answers.gitHubUsername}
+
+Or contact me at ${answers.emailAddress}.
 
 ## License
 
