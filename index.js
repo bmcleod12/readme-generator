@@ -1,56 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const badgeMaker = require('badge-maker');
-// const generateMarkdown = require('.\utils\generateMarkdown.js');
-
-const generateReadMe = (answers) =>
-`# ${answers.appTitle}
-
-## Description
-
-${answers.description}
-
-## Table of Contents
-
-* [Description](#description)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Credits](#credits)
-* [Questions](#questions)
-* [License](#license)
-
-## Installation
-
-${answers.installation}
-
-## Usage
-
-${answers.usage}
-
-## Contributing
-
-${answers.contribution}
-
-## Tests
-
-${answers.appTest}
-
-## Credits
-
-${answers.credits}
-
-## Questions
-
-Questions on the project? Visit my profile here: https://github.com/${answers.gitHubUsername}
-
-Or contact me at ${answers.emailAddress}.
-
-## License
-
-${answers.license}`;
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -93,7 +44,14 @@ const questions = [
         type:  'list',
         name: 'license',
         message: 'Select a license to apply to your application.',
-        choices: ['MIT', 'Unlicense']
+        choices: [
+            'Apache 2.0', 
+            'MIT', 
+            'GNU GPL v3',
+            'GNU LGPL v3',
+            'Mozilla Public License 2.0',
+            'Unlicense'
+        ]
     },
     {
         type:  'input',
@@ -109,7 +67,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, readMeContent) {
-    fs.writeFile('README_Generated.md', readMeContent, (err) =>
+    fs.writeFile('./output/README.md', readMeContent, (err) =>
     err ? console.log(err) : console.log('Successfully created README.md!')
   );
 }
@@ -120,9 +78,9 @@ function init() {
     inquirer
         .prompt(questions)
         .then((answers) => { 
-            const readMeContent = generateReadMe(answers);
+            const readMeContent = generateMarkdown(answers);
             console.log(readMeContent);
-            writeToFile('README.md_Generated', readMeContent);
+            writeToFile('./output/README.md', readMeContent);
         })
 };
 
