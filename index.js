@@ -7,6 +7,16 @@ const badgeMaker = require('badge-maker');
 const generateReadMe = (answers) =>
 `# ${answers.appTitle}
 
+## Table of Contents
+
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Credits](#credits)
+* [License](#license)
+
 ## Description
 
 ${answers.description}

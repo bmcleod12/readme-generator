@@ -1,8 +1,18 @@
-# Read Me Generator
+# ReadMe Generator
+
+## Table of Contents
+
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Credits](#credits)
+* [License](#license)
 
 ## Description
 
-asdf
+test
 
 ## Installation
 
@@ -10,7 +20,7 @@ asdf
 
 ## Usage
 
-asdf
+awer
 
 ## Contributing
 
@@ -18,7 +28,7 @@ asdf
 
 ## Tests
 
-asdf
+srth
 
 ## Credits
 
