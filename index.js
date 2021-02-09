@@ -5,38 +5,35 @@ const badgeMaker = require('badge-maker');
 // const generateMarkdown = require('.\utils\generateMarkdown.js');
 
 const generateReadMe = (answers) =>
-    `# Project Title
+`# ${answers.appTitle}
 
-    ${answers.appTitle}
+## Description
 
-    ## Description
+${answers.description}
 
-    ${answers.description}
+## Installation
 
-    ## Installation
+${answers.installation}
 
-    ${answers.installation}
+## Usage
 
-    ## Usage
+${answers.usage}
 
-    ${answers.usage}
+## Contributing
 
-    ## Contributing
+${answers.contribution}
 
-    ${answers.contribution}
+## Tests
 
-    ## Tests
+${answers.appTest}
 
-    ${answers.appTest}
+## Credits
 
-    ## Credits
+${answers.credits}
 
-    ${answers.credits}
-    
-    ## License
-    
-    ${answers.license}`
-    ;
+## License
+
+${answers.license}`;
 
 // TODO: Create an array of questions for user input
 const questions = [

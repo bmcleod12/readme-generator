@@ -1,31 +1,29 @@
-# Project Title
+# Read Me Generator
 
-    ReadMe Generator
+## Description
 
-    ## Description
+asdf
 
-    To create read me files easily
+## Installation
 
-    ## Installation
+asdf
 
-    Do this to install
+## Usage
 
-    ## Usage
+asdf
 
-    do this to use
+## Contributing
 
-    ## Contributing
+asdf
 
-    do this to contribute
+## Tests
 
-    ## Tests
+asdf
 
-    here are some tests
+## Credits
 
-    ## Credits
+asdf
 
-    here are my credits
-    
-    ## License
-    
-    MIT
+## License
+
+MIT
