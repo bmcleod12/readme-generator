@@ -4,8 +4,47 @@ const fs = require('fs');
 const badgeMaker = require('badge-maker');
 // const generateMarkdown = require('.\utils\generateMarkdown.js');
 
+const generateReadMe = (answers) =>
+    `# Project Title
+
+    ${answers.appTitle}
+
+    ## Description
+
+    ${answers.description}
+
+    ## Installation
+
+    ${answers.installation}
+
+    ## Usage
+
+    ${answers.usage}
+
+    ## Contributing
+
+    ${answers.contribution}
+
+    ## Tests
+
+    ${answers.appTest}
+
+    ## Credits
+
+    ${answers.credits}
+    
+    ## License
+    
+    ${answers.license}`
+    ;
+
 // TODO: Create an array of questions for user input
 const questions = [
+    {
+        type:  'input',
+        name: 'appTitle',
+        message: 'Provide the Title of your application.',
+    },
     {
         type:  'input',
         name: 'description',
@@ -32,6 +71,11 @@ const questions = [
         message: 'Provide a few test cases users can run on your application.',
     },
     {
+        type:  'input',
+        name: 'credits',
+        message: 'Provide any links or points of contact to list as Credits on the application.',
+    },
+    {
         type:  'list',
         name: 'license',
         message: 'Select a license to apply to your application.',
@@ -50,10 +94,23 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, readMeContent) {
+    fs.writeFile('README.md', readMeContent, (err) =>
+    err ? console.log(err) : console.log('Successfully created README.md!')
+  );
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+// when it's initialized, inquirer.prompt iterates through each question in the questions array
+function init() {
+    inquirer
+        .prompt(questions)
+        .then((answers) => { 
+            const readMeContent = generateReadMe(answers);
+            console.log(readMeContent);
+            writeToFile('README.md', readMeContent);
+        })
+};
 
 // Function call to initialize app
 init();
