@@ -95,6 +95,7 @@ Or contact me at ${answers.emailAddress}.
 ## License
 
 This application uses ${answers.license}.
+
 Please visit ${renderLicenseLink(answers.license)} to learn more.
 `;
 }
