@@ -16,7 +16,42 @@ This command line application enables you to create a ReadMe file for your GitHu
 
 ## Installation
 
-To install,
+As this is just a class project, it has not been added for public use in the npm registry, so we will install it the long way - downloading the code via zip file.
+
+Please note these installation instructions assume you already have Visual Studio Code installed, as well as npm.
+
+1. Click the Code button at the top right of this repository, then click Download ZIP.
+
+<img alt="Download ZIP" src="assets/download_zip.PNG"/>
+
+2. Open the zip folder location once it completes downloading.
+
+<img alt="Downloaded ZIP" src="assets/download_zip2.PNG"/>
+
+3. Right click on the zip file and select "Extract All..."
+
+<img alt="Extract all from ZIP" src="assets/extract-all.PNG"/>
+
+4. Browse for the location where you would like to extract the files.
+
+<img alt="Select Folder to Extract" src="assets/extract-tofolder.PNG"/>
+
+5. After the zip is extracted, right click on the folder and select "Open with Code"
+
+<img alt="Open in Visual Studio" src="assets/open-with-code.PNG"/>
+
+6. In Visual Studio, right click in the parent folder and select "Open in Integrated Terminal."
+
+<img alt="Open Integrated Terminal" src="assets/open-integrated-terminal.PNG"/>
+
+7. In the Integrated Terminal, enter "npm i" and hit Enter. This will install both fs and inquirer from the npm registry.
+
+<img alt="Enter npm i" src="assets/npm-i.PNG"/>
+
+8. Upon completion, thre will be a new node_modules folder in your Visual Studio, giving you what you need to run the program.
+
+<img alt="New node_modules folder" src="assets/npm-installed.PNG"/>
+
 
 ## Usage
 
