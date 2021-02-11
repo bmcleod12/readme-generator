@@ -79,7 +79,6 @@ function init() {
         .prompt(questions)
         .then((answers) => { 
             const readMeContent = generateMarkdown(answers);
-            console.log(readMeContent);
             writeToFile('./output/README.md', readMeContent);
         })
 };

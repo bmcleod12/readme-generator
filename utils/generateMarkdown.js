@@ -1,25 +1,42 @@
+const licenseOptions = [
+  {
+    licenseName: 'Apache 2.0',
+    badgeLink: '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+    licenseLink: 'https://choosealicense.com/licenses/apache-2.0/'
+  },
+  {
+    licenseName: 'GNU GPLv3',
+    badgeLink: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
+    licenseLink: 'https://choosealicense.com/licenses/gpl-3.0/'
+  },
+  {
+    licenseName: 'GNU LGPLv3',
+    badgeLink: '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)',
+    licenseLink: 'https://choosealicense.com/licenses/agpl-3.0/'
+  },
+  {
+    licenseName: 'MIT',
+    badgeLink: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+    licenseLink: 'https://choosealicense.com/licenses/mit/'
+  },
+  {
+    licenseName: 'Mozilla Public License 2.0',
+    badgeLink: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)',
+    licenseLink: 'https://choosealicense.com/licenses/mit/'
+  },
+  {
+    licenseName: 'Unlicense',
+    badgeLink: '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)',
+    licenseLink: 'https://choosealicense.com/licenses/unlicense/'
+  }
+];
+
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-
-// [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-// https://choosealicense.com/licenses/apache-2.0/
-
-// [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-// https://choosealicense.com/licenses/gpl-3.0/
-
-// [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
-// https://choosealicense.com/licenses/agpl-3.0/
-
-// [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-// https://choosealicense.com/licenses/mit/
-
-// [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-// https://choosealicense.com/licenses/mpl-2.0/
-
-// [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-// https://choosealicense.com/licenses/unlicense/
-
+  const currentLicense = licenseOptions.filter(license => licenseOptions.licenseName === license);
+  console.log(currentLicense[0].badgeLink);
 }
 
 // TODO: Create a function that returns the license link
@@ -33,6 +50,7 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `
+${renderLicenseBadge(answers.license)}
 # ${answers.appTitle}
 
 ## Description
@@ -79,9 +97,10 @@ Or contact me at ${answers.emailAddress}.
 ## License
 
 ${answers.license}
-${renderLicenseSection(data.license)}
-${renderLicenseLink(data.license)} 
 `;
 }
 
 module.exports = generateMarkdown;
+
+// ${renderLicenseSection(data.license)}
+// ${renderLicenseLink(data.license)} 
