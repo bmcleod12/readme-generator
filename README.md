@@ -29,29 +29,36 @@ Node.js: https://nodejs.org/en/
 
 <img alt="Download ZIP" src="assets/download_zip.PNG"/>
 
+
 2. Open the zip folder location once it completes downloading.
 
 <img alt="Downloaded ZIP" src="assets/download_zip2.PNG"/>
+
 
 3. Right click on the zip file and select "Extract All..."
 
 <img alt="Extract all from ZIP" src="assets/extract-all.PNG"/>
 
+
 4. Browse for the location where you would like to extract the files.
 
 <img alt="Select Folder to Extract" src="assets/extract-tofolder.PNG"/>
+
 
 5. After the zip is extracted, right click on the folder and select "Open with Code"
 
 <img alt="Open in Visual Studio" src="assets/open-with-code.PNG"/>
 
+
 6. In Visual Studio, right click in the parent folder and select "Open in Integrated Terminal."
 
 <img alt="Open Integrated Terminal" src="assets/open-integrated-terminal.PNG"/>
 
+
 7. In the Integrated Terminal, enter "npm i" and hit Enter. This will install both fs and inquirer from the npm registry.
 
 <img alt="Enter npm i" src="assets/npm-i.PNG"/>
+
 
 8. Upon completion, thre will be a new node_modules folder in your Visual Studio, giving you what you need to run the program.
 
@@ -66,9 +73,11 @@ To use the application, with Integrated Terminal still open in your VS Code:
 
 <img alt="Enter node index.js" src="assets/node-index.js.PNG"/>
 
+
 2. A series of questions will be asked, prompting you to provide information for each section of the ReadMe. After answering each question and assuming nothing goes wrong, you will be presented with a message reading, "Successfully created README.md!"
 
 <img alt="README successfully created" src="assets/run-index.PNG"/>
+
 
 3. The README will be created under output folder and will contain the information provided to the prompts. You can now copy this content/file into your own project for use in GitHub.
 
@@ -76,7 +85,11 @@ To use the application, with Integrated Terminal still open in your VS Code:
 
 ## Tests
 
+Test 1: Run the index.js and do not provide any data in the free-form prompts. If you continually press "enter" for the prompts, no data will be recorded, but the outline for the README will still be created. This will be useful for you if you want to edit the README in a full screen and with the ability to more easily add carraige returns, links, and formatting.
 
+Test 2: Test each available License option and confirm each provides you with a license badge and link matching the license you selected.
+
+Test 3: Click each Table of Contents entry to confirm the page jumps to the appropriate section.
 
 ## License
 
