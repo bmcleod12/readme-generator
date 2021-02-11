@@ -1,3 +1,4 @@
+// name, link, and info for each license type - to be filtered and selected as appropriate
 const licenseOptions = [
   {
     licenseName: 'Apache 2.0',
@@ -31,26 +32,23 @@ const licenseOptions = [
   }
 ];
 
-
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Returns the license badge link so it's available for the generateMarkdown functions
 function renderLicenseBadge(license) {
-  const currentLicense = licenseOptions.filter(license => licenseOptions.licenseName === license);
-  console.log(currentLicense[0].badgeLink);
+  const currentLicense = licenseOptions.filter(licenseOption => licenseOption.licenseName == license);
+  return currentLicense[0].badgeLink;
 }
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseLink(license) {
+  const currentLicense = licenseOptions.filter(licenseOption => licenseOption.licenseName == license);
+  return currentLicense[0].licenseLink;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `
 ${renderLicenseBadge(answers.license)}
+
 # ${answers.appTitle}
 
 ## Description
@@ -96,11 +94,11 @@ Or contact me at ${answers.emailAddress}.
 
 ## License
 
-${answers.license}
+This application uses ${answers.license}.
+Please visit ${renderLicenseLink(answers.license)} to learn more.
 `;
 }
 
 module.exports = generateMarkdown;
 
-// ${renderLicenseSection(data.license)}
-// ${renderLicenseLink(data.license)} 
+
