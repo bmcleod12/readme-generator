@@ -47,8 +47,8 @@ const questions = [
         choices: [
             'Apache 2.0', 
             'MIT', 
-            'GNU GPL v3',
-            'GNU LGPL v3',
+            'GNU GPLv3',
+            'GNU LGPLv3',
             'Mozilla Public License 2.0',
             'Unlicense'
         ]
