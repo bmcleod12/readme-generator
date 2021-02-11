@@ -18,7 +18,12 @@ This command line application enables you to create a ReadMe file for your GitHu
 
 As this is just a class project, it has not been added for public use in the npm registry, so we will install it the long way - downloading the code via zip file.
 
-Please note these installation instructions assume you already have Visual Studio Code installed, as well as npm.
+Please note these installation instructions assume you already have Visual Studio Code installed, as well as Node.js.
+
+Visual Studio Code: https://code.visualstudio.com/ 
+
+Node.js: https://nodejs.org/en/
+
 
 1. Click the Code button at the top right of this repository, then click Download ZIP.
 
