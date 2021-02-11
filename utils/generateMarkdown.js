@@ -32,21 +32,21 @@ const licenseOptions = [
   }
 ];
 
-// Returns the license badge link so it's available for the generateMarkdown functions
+// Returns the license badge link so it's available for the generateMarkdown function
 function renderLicenseBadge(license) {
   const currentLicense = licenseOptions.filter(licenseOption => licenseOption.licenseName == license);
   return currentLicense[0].badgeLink;
 }
 
-// TODO: Create a function that returns the license link
+// Returns the license link to more info so it's available for the generateMarkdown function
 function renderLicenseLink(license) {
   const currentLicense = licenseOptions.filter(licenseOption => licenseOption.licenseName == license);
   return currentLicense[0].licenseLink;
 }
 
-// TODO: Create a function to generate markdown for README
+// Generates the markdown code for README; grabs user's answers passed from index.js along the way
 function generateMarkdown(answers) {
-  return `
+return `
 ${renderLicenseBadge(answers.license)}
 
 # ${answers.appTitle}
@@ -100,6 +100,7 @@ Please visit ${renderLicenseLink(answers.license)} to learn more.
 `;
 }
 
+// makes the output from the genrateMarkdown function available to pass back to index.js for the writeToFile function
 module.exports = generateMarkdown;
 
 
