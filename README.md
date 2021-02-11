@@ -60,7 +60,19 @@ Node.js: https://nodejs.org/en/
 
 ## Usage
 
+To use the application, with Integrated Terminal still open in your VS Code:
 
+1. Enter "node index.js"
+
+<img alt="Enter node index.js" src="assets/node-index.js.PNG"/>
+
+2. A series of questions will be asked, prompting you to provide information for each section of the ReadMe. After answering each question and assuming nothing goes wrong, you will be presented with a message reading, "Successfully created README.md!"
+
+<img alt="README successfully created" src="assets/run-index.PNG"/>
+
+3. The README will be created under output folder and will contain the information provided to the prompts. You can now copy this content/file into your own project for use in GitHub.
+
+<img alt="README updates" src="assets/updated-readme.PNG"/>
 
 ## Tests
 
